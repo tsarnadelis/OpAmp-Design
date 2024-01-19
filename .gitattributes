@@ -1,3 +1,2 @@
-opamp_hlek3/** linguist-vendored
+opamp_hlek3/** linguist-language="Cadence"
 *.pdf linguist-documentation	
-opamp_hlek3/*.DSN linguist-detectable
