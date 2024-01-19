@@ -1,0 +1,182 @@
+
+**** 01/08/24 20:19:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-OpAmpSim"  [ C:\Cadence\Hlektroniki3\opamp_hlek3\opamp_hlek3-pspicefiles\schematic1\opampsim.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "OpAmpSim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../opamp_hlek3-pspicefiles/opamp_hlek3.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\SPB_17.2\tools\pspice\library\nomd.lib" 
+.lib "C:\Cadence\SPB_17.2\tools\pspice\library\nom.lib" 
+
+*Analysis directives: 
+.AC DEC 40 1 1e+10
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source OPAMP_HLEK3
+M_M1         N00303 0 N00462 N00462 pfet  
++ L=2u  
++ W=30u         
+M_M3         N00303 N00303 N00291 N00291 nfet  
++ L=2u  
++ W=2u         
+M_M4         N00311 N00303 N00291 N00291 nfet  
++ L=2u  
++ W=2u         
+M_M6         N00388 N00311 N00291 N00291 nfet  
++ L=2u  
++ W=23u         
+M_M2         N00311 N01113 N00462 N00462 pfet  
++ L=2u  
++ W=30u         
+M_M8         N00450 N00450 N00392 N00392 pfet  
++ L=2u  
++ W=10u         
+M_M5         N00462 N00450 N00392 N00392 pfet  
++ L=2u  
++ W=6u         
+M_M7         N00388 N00450 N00392 N00392 pfet  
++ L=2u  
++ W=33u         
+I_I1         N00450 N00291 DC 100uAdc  
+C_Cc         N00311 N00388  1p  TC=0,0 
+V_V1         N00392 0 2.064Vdc
+V_V2         N00291 0 -2.064Vdc
+V_V3         N01113 0 DC 0Vdc AC 1Vac 
+C_CL         N00388 0  2.88p  TC=0,0 
+V_V4         N22666 0  
++PULSE 1 -1 0 100p 100p 500n 1u
+R_R1         0 N22666  1k TC=0,0 
+
+**** RESUMING OpAmpSim.cir ****
+.END
+
+**** 01/08/24 20:19:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-OpAmpSim"  [ C:\Cadence\Hlektroniki3\opamp_hlek3\opamp_hlek3-pspicefiles\schematic1\opampsim.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               pfet            nfet            
+               PMOS            NMOS            
+       LEVEL    3               3            
+         TPG   -1                            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD   22.000000E-09  164.700000E-09 
+         VTO    -.9056           .786        
+          KP   29.352000E-06   96.379000E-06 
+       GAMMA     .4863           .5863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH  104.7            85.45         
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .85             .8          
+        PBSW     .85             .8          
+          CJ  484.470000E-06  385.410000E-06 
+        CJSW  164.570000E-12  139.400000E-12 
+          MJ     .5027          1.1854       
+        MJSW     .217168         .125195     
+        CGSO   53.752000E-12  402.410000E-12 
+        CGDO   53.752000E-12  402.410000E-12 
+        CGBO  336.500000E-12  361.440000E-12 
+        NSUB   18.900000E+15   16.160000E+15 
+         NFS    3.460000E+12    5.000000E+12 
+         TOX   21.200000E-09   21.200000E-09 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  180.2           591.7          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  373.200000E+03  208.200000E+03 
+       DELTA    1.52             .6967       
+       THETA     .1248           .08122      
+         ETA     .1641           .07066      
+       KAPPA    9.694            .1396       
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 01/08/24 20:19:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-OpAmpSim"  [ C:\Cadence\Hlektroniki3\opamp_hlek3\opamp_hlek3-pspicefiles\schematic1\opampsim.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00291)   -2.0640 (N00303)    -.4984 (N00311)    -.4984 (N00388)     .0424     
+
+(N00392)    2.0640 (N00450)    -.1593 (N00462)    1.2413 (N01113)    0.0000     
+
+(N22666)    1.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.883E-04
+    V_V2         4.883E-04
+    V_V3         0.000E+00
+    V_V4        -1.000E-03
+
+    TOTAL POWER DISSIPATION   3.02E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/08/24 20:19:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-OpAmpSim"  [ C:\Cadence\Hlektroniki3\opamp_hlek3\opamp_hlek3-pspicefiles\schematic1\opampsim.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

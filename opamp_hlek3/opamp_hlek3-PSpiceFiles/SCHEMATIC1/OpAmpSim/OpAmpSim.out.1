@@ -1,0 +1,73 @@
+
+**** 12/17/23 13:24:04 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-OpAmpSim"  [ c:\cadence\hlektroniki3\opamp_hlek3\opamp_hlek3-pspicefiles\schematic1\opampsim.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "OpAmpSim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../opamp_hlek3-pspicefiles/opamp_hlek3.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\SPB_17.2\tools\pspice\library\nomd.lib" 
+.lib "C:\Cadence\SPB_17.2\tools\pspice\library\nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source OPAMP_HLEK3
+M_M1         N00303 0 N00462 N00462 pfet  
++ L=2u  
++ W=30u         
+M_M3         N00303 N00303 N00291 N00291 nfet  
++ L=2u  
++ W=2u         
+M_M4         N00311 N00303 N00291 N00291 nfet  
++ L=2u  
++ W=2u         
+M_M6         N00388 N00311 N00291 N00291 nfet  
++ L=2u  
++ W=23u         
+M_M2         N00311 N01113 N00462 N00462 pfet  
++ L=2u  
++ W=30u         
+M_M8         N00450 N00450 N00392 N00392 pfet  
++ L=2u  
++ W=10u         
+M_M5         N00462 N00450 N00392 N00392 pfet  
++ L=2u  
++ W=6u         
+M_M7         N00388 N00450 N00392 N00392 pfet  
++ L=2u  
++ W=33u         
+I_I1         N00450 N00291 DC 100uAdc  
+C_Cc         N00311 N00388  1p  TC=0,0 
+V_V1         N00392 0 2.064Vdc
+V_V2         N00291 0 -2.064Vdc
+V_V3         0 0 DC 0Vdc AC 1Vac 
+C_CL         N00388 0  2.88p  TC=0,0 
+V_V4         N01113 0  
++PULSE 1 -1 0 100p 100p 500n 1u
+
+**** RESUMING OpAmpSim.cir ****
+.END
+
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving V_V3. You may break the loop by adding a series resistance
+
