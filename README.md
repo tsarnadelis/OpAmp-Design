@@ -2,7 +2,7 @@
 
 <p align=center> 
   OpAmp Design as part of the class Electronics 3, 7th semester, ECE Aristotle University of Thessaloniki.<br>
-  Design of a simple OpAmp, calculating the transistor widths and testing Gain, Slew Rate, Gain Bandwidth etc. Made in<b>PSPICE</b>.<br>
+  Design of a simple OpAmp, calculating the transistor widths and testing Gain, Slew Rate, Gain Bandwidth etc. Made in <b>Cadence PSPICE</b>.<br>
   Included are the PSPICE folder, a MATLAB script and the final report.<br>
   <br>
   <br>
