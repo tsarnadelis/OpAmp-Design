@@ -1,2 +1,5 @@
-opamp_hlek3/** linguist-language=Cadence
+opamp_hlek3/opamp_hlek3-PSpiceFiles.** -linguist-detectable
+*.DSN linguist-language=cadence
+*.DBK linguist-language=cadence
+*.opj linguist-language=cadence
 *.pdf linguist-documentation	
